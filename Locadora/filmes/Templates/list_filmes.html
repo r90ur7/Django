@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+{% block content %} 
+    {% for filme in filmes %}
+        <ul>
+            <li>
+                <p>{{ filme.filme }} - {{ filme.genero }} - {{ filme.quantidade }} - {{ filme.preco }}
+                <a href="{% url 'filme:Del_filmes' filme.id %}">Delete</a>
+                <a href="{% url 'filme:Edit_filmes' filme.id %}">Edit</a></p>
+            </li> 
+        </ul>
+    {% endfor %} 
+    <a href="{% url 'filme:index' %}">Inicio</a> 
+    <a href="{% url 'filme:New_filmes' %}">New</a> 
+
+{% endblock %} 
+

@@ -1,0 +1,9 @@
+{%extends 'base.html'  %}
+
+{% block product %}
+    <h1>Listagem de Produtos</h1>
+    <a href="{% url 'produto:novo' %}">Novo</a>
+    <br>
+    {{ produtos }}
+
+{% endblock %}

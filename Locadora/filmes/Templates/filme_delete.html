@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for filme in filmes %}
+        <p>{{ filme.filme }} - {{ filme.genero }} - {{ filme.quantidade }} - {{ filme.preco }}</p>
+    {% endfor %}
+    <a href="{% url 'filme:index' %}">Inicio</a>
+    <a href="{% url 'filme:list_filmes' %}">Lista De Filmes</a>
+{% endblock %}
